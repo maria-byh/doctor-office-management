@@ -1,10 +1,10 @@
 .Login {
     display: inline-flex;
     padding-left: 0px;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 114px;
+    gap: 14px;
     flex-shrink: 0;
+    flex-direction: column;
+    height: 100%;
 }
 
 .title {
