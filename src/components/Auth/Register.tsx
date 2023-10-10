@@ -10,6 +10,8 @@ import { auth, db } from '../../firebase/firebase.config.ts'
 import { setDoc, doc } from 'firebase/firestore'
 import { useAppDispatch } from '../../hooks/storeHook.ts'
 import { login } from './authSlice.ts'
+import googleIcon from '../../assets/Google.svg'
+import facebookIcon from '../../assets/Facebook.svg'
 
 
 
@@ -56,13 +58,16 @@ const Register: React.FC<RegisterProps> = ({ changeContentHandler }) => {
 
   return (
     <div className='Register'>
-        <p className='title'>Sing up your account</p>
-        <p className='subtitle'>Let’s Enter your data to continue use healthy 24 services</p>
+      <div style={{width: '100%'}}>
+        <p className='title'>Sing up your account 👋</p>
+        <p className='subtitle'>Let’s Enter your data to continue use healthy <br className='br'/>24 services</p>
+      </div>
+        
         {errorMessage && (<p>{errorMessage}</p>)}
-        <form onSubmit={handleSubmit(handleFormSubmit)} action="submit">
+        <form className='registerform' onSubmit={handleSubmit(handleFormSubmit)} action="submit">
           <div className=''>
               <p className='label'>Fullname</p>
-              <input className='' type="text"
+              <input className='registerInput' type="text"
               placeholder='Enter Your name here'
               {...register('fullName')}/>
               {errors.fullName? (<p>{errors.fullName.message}</p>) :
@@ -70,7 +75,7 @@ const Register: React.FC<RegisterProps> = ({ changeContentHandler }) => {
           </div>
           <div className=''>
               <p className='label'>Email</p>
-              <input className='' type="email" 
+              <input className='registerInput' type="email" 
               placeholder='Enter Your email here'
               {...register('email')}
               />
@@ -79,19 +84,27 @@ const Register: React.FC<RegisterProps> = ({ changeContentHandler }) => {
           </div>
           <div className=''>
               <p className='label'>Password</p>
-              <input className='' type="password" 
+              <input className='registerInput' type="password" 
               placeholder='Enter Your Password here'
               {...register('password')}/>
               {errors.password? (<p>{errors.password.message}</p>) :
               (<></>)}
           </div>
-          <p>by sign up to healthy 24 you agree all term and condition</p>
-          <button disabled={loading} type='submit'>Sign Up</button>
+          <div style={{width: '100%', display: 'flex', alignItems: 'center'}}>
+            <input
+              className='checkbox'
+              type="checkbox"
+              />
+            <label className='termandcond' htmlFor="termandcond">
+              by sign up to healthy 24 you agree all <span style={{ fontWeight: 'bold' }}>term</span> and <span style={{ fontWeight: 'bold' }}><br className='br'/>condition</span>
+            </label>
+          </div>
+          <button className='submitbutton' disabled={loading} type='submit'>Sign Up</button>
         </form>
-        or
-        <button>Sign Up with google</button>
-        <button>Sign Up with facebook</button>
-        <p>You Already have account ? <button type='button' onClick={goToLogin}> Sign in</button></p>
+        <span className='or'>or</span>
+        <button className='registerButton'><img style={{marginRight: '8px'}} src={googleIcon} alt='Google Icon' />  Sign Up with google</button>
+        <button className='registerButton'><img style={{marginRight: '8px'}} src={facebookIcon} alt='Facebook Icon' /> Sign Up with facebook</button>
+        <p className='gotosignin'>You Already have account ? <button className='gotosigninbtn' type='button' onClick={goToLogin}> Sign in</button></p>
         
     </div>
   )

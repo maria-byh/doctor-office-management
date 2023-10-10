@@ -4,7 +4,7 @@ import { LoginProps } from '../../types/Props'
 const Login: React.FC<LoginProps> = ({ changeContentHandler }) =>  {
   return (
     <div>
-      hello world
+      Login
     </div>
   )
 }

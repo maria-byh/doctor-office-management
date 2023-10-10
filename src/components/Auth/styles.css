@@ -1,35 +1,158 @@
-.Login {
+.Register {
     display: inline-flex;
-    padding-left: 0px;
-    gap: 14px;
-    flex-shrink: 0;
     flex-direction: column;
     height: 100%;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .title {
     color: #192252;
     font-size: 32px;
-    font-style: normal;
     font-weight: 600;
-    line-height: normal;
     letter-spacing: 0.16px;
 }
 
 .subtitle {
     color: #848FAC;
     font-size: 14px;
-    font-style: normal;
     font-weight: 400;
-    line-height: normal;
     letter-spacing: 0.07px;
+}
+
+.registerform {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
 }
 
 .label {
     color: #192252;
     font-size: 14px;
-    font-style: normal;
     font-weight: 600;
     line-height: normal;
     letter-spacing: 0.07px;
+}
+
+.registerInput {
+    width: 486px;
+    height: 48px;
+    border-radius: 8px;
+    border: 1px solid #C5D0E6;
+    padding-inline: 10px;
+}
+
+.registerInput::placeholder {
+    color: #C5D0E6;
+}
+
+.termandcond {
+    color: #192252;
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.checkbox {
+    margin-right: 20px;
+    border-radius: 4px;
+    border: 1px solid #DFE8F6;
+    width: 20px;
+    height: 20px;
+}
+
+.submitbutton {
+    width: 486px;
+    height: 48px;
+    border: none;
+    border-radius: 8px;
+    background: #103F74;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.07px;
+}
+
+.or {
+    text-align: center;
+    color: #2B2B36;
+    font-weight: 600;
+    letter-spacing: 0.07px;
+}
+
+.registerButton {
+    height: 48px;
+    width: 486px;
+    border-radius: 8px;
+    border: 1px solid #C5D0E6;
+    background: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gotosignin {
+    text-align: center;
+    color: #000;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.gotosigninbtn {
+    border: none;
+    background-color: transparent;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 475px) {
+    .title {
+        font-size: 16px;
+    }
+    
+    .subtitle {  
+        font-size: 14px; 
+    }
+    
+    .registerform {
+        gap: 8px;
+    }
+    
+    .label {
+        font-size: 16px;
+    }
+    
+    .registerInput {
+        width: 332px;
+        height: 48px;
+        padding-inline: 10px;
+    }
+    
+    .termandcond {
+        font-size: 12px;
+    }
+    
+    .checkbox {
+        margin-right: 20px;
+        border-radius: 4px;
+    }
+    
+    .submitbutton {
+        width: 332px;
+        font-size: 14px;
+    }
+    
+    .registerButton {
+        width: 332px;;
+        border-radius: 8px;
+    }
+
+    .br {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 475px) {
+    .br {
+        display: none;
+    }
 }
