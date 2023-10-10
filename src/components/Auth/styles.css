@@ -104,6 +104,11 @@
     font-weight: 600;
 }
 
+.errormessage {
+    font-size: 12px;
+    color: red;
+}
+
 @media screen and (max-width: 475px) {
     .title {
         font-size: 16px;
