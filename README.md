@@ -1,27 +1,78 @@
-# React + TypeScript + Vite
+# Doctor's Office Management System - Front-end Developer Test
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Table of Contents
 
-Currently, two official plugins are available:
+- [Project Overview](#project-overview)
+- [Requirements](#requirements)
+- [Technologies Used](#technologies-used)
+- [Authentication](#authentication)
+- [Data Source](#data-source)
+- [State Management](#state-management)
+- [Styling](#styling)
+- [Deployment](#deployment)
+- [Testing](#testing)
+- [Folder Structure](#folder-structure)
+- [Credits](#credits)
+- [License](#license)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Project Overview
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+This project is a web-based user interface for a Doctor's Office Management System. It allows doctors to manage appointments, patient records, medical history, and more.
+**live view [Doctor's Office Management System](https://chipper-dragon-4185b7.netlify.app/).
 
-- Configure the top-level `parserOptions` property like this:
+### Requirements
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+- Framework: React TypeScript.
+- Styling: CSS.
+- State Management: Redux / Redux Toolkit.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Technologies Used
+
+- React
+- Yup
+- TypeScript
+- CSS 
+- Redux / Redux Toolkit
+- Firebase
+
+---
+
+## Authentication
+
+I have used Firebase for authentication. Users can create accounts and log in securely using Firebase's authentication services such as (email and password auth, google and facebook auth). i also used yup to verify the information submitted.
+
+---
+
+## State Management
+
+Redux and Redux Toolkit have been employed for efficient state management in this project. 
+
+---
+
+## Styling
+
+The project utilizes CSS for styling to ensure a clean and maintainable codebase.
+
+---
+
+## Deployment
+
+The application has been deployed using Netlify. You can access and test it by visiting the following link: [Doctor's Office Management System](https://chipper-dragon-4185b7.netlify.app/).
+
+---
+
+## Folder Structure
+
+The project follows a well-organized folder structure for maintainability and scalability. Key directories include:
+- `src`: Contains the source code.
+- `src/assets`: the different media files used.
+- `src/components`: Reusable React components.
+- `src/firebase`: Firebase configuration (This is a test project, so the API key is not protected or hidden.).
+- `src/hooks`: Custom hooks.
+- `src/pages`: The routed pages.
+- `src/redux`: Redux store setup and slice definitions.
+- `src/types`: Typescript types.
+    
+---
