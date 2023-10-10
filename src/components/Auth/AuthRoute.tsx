@@ -1,5 +1,5 @@
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
 type Props = any;
@@ -24,7 +24,7 @@ export default function AuthRoute(props: Props) {
     
     return () => unsubscribe();
     }, [auth, navigate]);
-    
+
     if (loading) return <p>Loading...</p>;
 
     return <div>{children}</div>;

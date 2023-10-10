@@ -1,7 +1,6 @@
 import './Styles.css'
-import sideImage from '../assets/sideImage.jpg'
 import { Register, Login } from '../components'
-import { useMemo, useState } from 'react'
+import { useState } from 'react'
 import photo1 from '../assets/national-cancer-institute-kooSjlL8LnQ-unsplash-removebg-preview 1.png'
 import photo2 from '../assets/austin-distel-7bMdiIqz_J4-unsplash-removebg-preview 2.png'
 import photo3 from '../assets/national-doctors-day-1-920x518-removebg-preview 2.png'
