@@ -9,7 +9,7 @@ import { FacebookAuthProvider, GoogleAuthProvider, createUserWithEmailAndPasswor
 import { auth, db } from '../../firebase/firebase.config.ts'
 import { setDoc, doc } from 'firebase/firestore'
 import { useAppDispatch } from '../../hooks/storeHook.ts'
-import { login } from './authSlice.ts'
+import { login } from '../../redux/authSlice.ts'
 import googleIcon from '../../assets/Google.svg'
 import facebookIcon from '../../assets/Facebook.svg'
 

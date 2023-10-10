@@ -10,24 +10,22 @@ export default function AuthRoute(props: Props) {
     const navigate = useNavigate();
     const [ loading, setLoading ] = useState(false);
 
-    useEffect(() => (
-        AuthCheck()
-    ), [auth]);
-
-    const AuthCheck = onAuthStateChanged(auth, (user)=>{
-        if(user) {
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, (user) => {
+            if(user) {
+                setLoading(false);
+                navigate('/dashboard');
+            } else {
+                console.log('unauthorized');
+                navigate('/')
+            }
             setLoading(false);
-        } else {
-            console.log('unauthorized');
-            navigate('/login')
-        }
-    })
-
-    if (loading) return <p>loading...</p>
+        });
     
-    return (
-        <div>
-            {children}
-        </div>
-    )
+    return () => unsubscribe();
+    }, [auth, navigate]);
+    
+    if (loading) return <p>Loading...</p>;
+
+    return <div>{children}</div>;
 }
