@@ -6,14 +6,10 @@
 - [Requirements](#requirements)
 - [Technologies Used](#technologies-used)
 - [Authentication](#authentication)
-- [Data Source](#data-source)
 - [State Management](#state-management)
 - [Styling](#styling)
 - [Deployment](#deployment)
-- [Testing](#testing)
 - [Folder Structure](#folder-structure)
-- [Credits](#credits)
-- [License](#license)
 
 ---
 
